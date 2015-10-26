@@ -64,14 +64,12 @@ class Mission
 		"ace_cargo",
 		"A3_Soft_F_Gamma_HEMTT",
 		"A3_Structures_F_Mil_Cargo",
-		"RHS_US_A2_AirImport",
-		"rhsusf_c_hmmwv",
-		"rhsusf_vehicles",
 		"A3_Armor_F_Slammer",
 		"CAMisc",
 		"aia_misc_config",
 		"A3_Soft_F_Bootcamp_Offroad_01",
-		"a3_soft_f_offroad_01"
+		"a3_soft_f_offroad_01",
+		"CUP_AirVehicles_UH60"
 	};
 	addOnsAuto[]=
 	{
@@ -135,9 +133,7 @@ class Mission
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Soft_F_Gamma_HEMTT",
 		"A3_Structures_F_Mil_Cargo",
-		"RHS_US_A2_AirImport",
-		"rhsusf_c_hmmwv",
-		"rhsusf_vehicles",
+		"CUP_AirVehicles_UH60",
 		"A3_Armor_F_Slammer",
 		"CAMisc",
 		"aia_misc_config",
@@ -2488,7 +2484,7 @@ class Mission
 					skill=0.60000002;
 					description="respawn for mission vics";
 					syncId=11;
-					synchronizations[]={45,47,46,44,48,43,39,37,38,42,41,40,29,30,31};
+					synchronizations[]={40,42,41,39,43,38,37,29,30,31};
 				};
 			};
 		};
@@ -2573,7 +2569,7 @@ class Mission
 					skill=0.60000002;
 					description="vehicle respawn for base transport";
 					syncId=12;
-					synchronizations[]={34,32,33,50,49};
+					synchronizations[]={34,32,33,45,44};
 				};
 			};
 		};
@@ -4056,7 +4052,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="RHS_UH60M";
+							value="CUP_B_UH60M_FFV_US";
 							parentCls="ALiVE_SUP_TRANSPORT";
 							typeName="transport_type";
 						};
@@ -4087,7 +4083,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=87;
+		items=81;
 		class Item0
 		{
 			position[]={15236.952,17.998047,17296.098};
@@ -4640,7 +4636,7 @@ class Mission
 			offsetY=-0.0095672598;
 			id=142;
 			side="EMPTY";
-			vehicle="RHS_UH60M_MEV2";
+			vehicle="CUP_B_UH60M_FFV_US";
 			skill=0.60000002;
 			text="MED_AIR_1";
 			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
@@ -4671,372 +4667,302 @@ class Mission
 		};
 		class Item53
 		{
-			position[]={15125.524,17.91,17109.305};
-			azimut=353.18201;
-			offsetY=-0.0018158;
+			position[]={15103.594,17.91,17108.445};
+			azimut=188.974;
 			id=145;
 			side="EMPTY";
-			vehicle="rhsusf_m1025_w_m2";
+			vehicle="CamoNet_BLUFOR_big_F";
 			skill=0.60000002;
+			init="this allowdamage false;";
 		};
 		class Item54
 		{
-			position[]={15128.664,17.91,17111.646};
-			azimut=328.44101;
-			offsetY=-0.0018158;
+			position[]={15107.014,17.91,17111.156};
+			azimut=348.651;
+			offsetY=0.032607999;
 			id=146;
 			side="EMPTY";
-			vehicle="rhsusf_m1025_w_m2";
+			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
+			init="[this, 1] call PMCT_vic_addCargo;";
 			syncId=38;
 			synchronizations[]={11};
 		};
 		class Item55
 		{
-			position[]={15122.694,17.91,17108.195};
-			azimut=353.17899;
-			offsetY=-0.0018158;
+			position[]={15102.264,17.91,17109.646};
+			azimut=11.9635;
+			offsetY=0.0092620803;
 			id=147;
 			side="EMPTY";
-			vehicle="rhsusf_m1025_w_m2";
+			vehicle="B_MBT_01_cannon_F";
 			skill=0.60000002;
+			init="[this, 1] call PMCT_vic_addCargo;";
 			syncId=39;
 			synchronizations[]={11};
 		};
 		class Item56
 		{
-			position[]={15147.824,17.977724,17112.406};
-			azimut=328.439;
-			offsetY=-0.0018158;
-			id=148;
-			side="EMPTY";
-			vehicle="rhsusf_m1025_w_m2";
-			skill=0.60000002;
-			syncId=40;
-			synchronizations[]={11};
-		};
-		class Item57
-		{
-			position[]={15144.674,17.929516,17110.066};
-			azimut=353.17999;
-			offsetY=-0.00177002;
-			id=149;
-			side="EMPTY";
-			vehicle="rhsusf_m1025_w_m2";
-			skill=0.60000002;
-			syncId=41;
-			synchronizations[]={11};
-		};
-		class Item58
-		{
-			position[]={15141.844,17.901941,17108.955};
-			azimut=353.17801;
-			offsetY=-0.00180054;
-			id=150;
-			side="EMPTY";
-			vehicle="rhsusf_m1025_w_m2";
-			skill=0.60000002;
-			syncId=42;
-			synchronizations[]={11};
-		};
-		class Item59
-		{
-			position[]={15103.594,17.91,17108.445};
+			position[]={15137.085,17.882486,17081.561};
 			azimut=188.974;
-			id=151;
+			id=148;
 			side="EMPTY";
 			vehicle="CamoNet_BLUFOR_big_F";
 			skill=0.60000002;
 			init="this allowdamage false;";
 		};
+		class Item57
+		{
+			position[]={15135.785,17.891922,17083.148};
+			id=149;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			syncId=40;
+			synchronizations[]={11};
+		};
+		class Item58
+		{
+			position[]={15137.75,17.875578,17079.967};
+			id=150;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			syncId=41;
+			synchronizations[]={11};
+		};
+		class Item59
+		{
+			position[]={15135.76,17.883955,17080.123};
+			id=151;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			skill=0.60000002;
+			syncId=42;
+			synchronizations[]={11};
+		};
 		class Item60
 		{
-			position[]={15107.014,17.91,17111.156};
-			azimut=348.651;
-			offsetY=0.032607999;
+			position[]={15137.955,17.883171,17083.123};
 			id=152;
 			side="EMPTY";
-			vehicle="B_APC_Wheeled_01_cannon_F";
+			vehicle="B_Quadbike_01_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_vic_addCargo;";
 			syncId=43;
 			synchronizations[]={11};
 		};
 		class Item61
 		{
-			position[]={15102.264,17.91,17109.646};
-			azimut=11.9635;
-			offsetY=0.0092620803;
-			id=153;
-			side="EMPTY";
-			vehicle="B_MBT_01_cannon_F";
-			skill=0.60000002;
-			init="[this, 1] call PMCT_vic_addCargo;";
-			syncId=44;
-			synchronizations[]={11};
-		};
-		class Item62
-		{
-			position[]={15137.085,17.882486,17081.561};
-			azimut=188.974;
-			id=154;
-			side="EMPTY";
-			vehicle="CamoNet_BLUFOR_big_F";
-			skill=0.60000002;
-			init="this allowdamage false;";
-		};
-		class Item63
-		{
-			position[]={15135.785,17.891922,17083.148};
-			id=155;
-			side="EMPTY";
-			vehicle="B_Quadbike_01_F";
-			skill=0.60000002;
-			syncId=45;
-			synchronizations[]={11};
-		};
-		class Item64
-		{
-			position[]={15137.75,17.875578,17079.967};
-			id=156;
-			side="EMPTY";
-			vehicle="B_Quadbike_01_F";
-			skill=0.60000002;
-			syncId=46;
-			synchronizations[]={11};
-		};
-		class Item65
-		{
-			position[]={15135.76,17.883955,17080.123};
-			id=157;
-			side="EMPTY";
-			vehicle="B_Quadbike_01_F";
-			skill=0.60000002;
-			syncId=47;
-			synchronizations[]={11};
-		};
-		class Item66
-		{
-			position[]={15137.955,17.883171,17083.123};
-			id=158;
-			side="EMPTY";
-			vehicle="B_Quadbike_01_F";
-			skill=0.60000002;
-			syncId=48;
-			synchronizations[]={11};
-		};
-		class Item67
-		{
 			position[]={15187.593,17.91,17253.748};
-			id=159;
+			id=153;
 			side="EMPTY";
 			vehicle="HeliH";
 			skill=0.60000002;
 		};
-		class Item68
+		class Item62
 		{
 			position[]={15047.619,17.91,17103.355};
 			azimut=0.0037724399;
 			offsetY=-0.0410304;
-			id=160;
+			id=154;
 			side="EMPTY";
 			vehicle="C_Offroad_01_repair_F";
 			skill=0.60000002;
 			text="repair_truck";
-			syncId=49;
+			syncId=44;
 			synchronizations[]={12};
 		};
-		class Item69
+		class Item63
 		{
 			position[]={15034.469,17.91,17102.256};
 			azimut=0.000362955;
 			offsetY=-0.0094623603;
-			id=161;
+			id=155;
 			side="EMPTY";
 			vehicle="B_Truck_01_Repair_F";
 			skill=0.60000002;
 			text="repair_truck_2";
-			syncId=50;
+			syncId=45;
 			synchronizations[]={12};
 		};
-		class Item70
+		class Item64
 		{
 			position[]={15139.755,17.91,17168.33};
-			id=162;
+			id=156;
 			side="EMPTY";
 			vehicle="HeliH";
 			skill=0.60000002;
 			text="repair";
 		};
-		class Item71
+		class Item65
 		{
 			position[]={15155.229,17.849072,17341.828};
 			azimut=101.784;
 			offsetY=2.4795499e-005;
-			id=163;
+			id=157;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsLaunch_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,7] call PMCT_fnc_cargoLoad;";
 		};
-		class Item72
+		class Item66
 		{
 			position[]={15152.438,17.844881,17340.607};
 			azimut=295;
 			offsetY=5.3405802e-005;
-			id=164;
+			id=158;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,5] call PMCT_fnc_cargoLoad;";
 		};
-		class Item73
+		class Item67
 		{
 			position[]={15156.574,17.855068,17341.818};
+			azimut=9.9920797;
+			offsetY=0.000227928;
+			id=159;
+			side="EMPTY";
+			vehicle="Box_NATO_Support_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,8] call PMCT_fnc_cargoLoad;";
+		};
+		class Item68
+		{
+			position[]={15153.839,17.845043,17341.947};
+			azimut=6.9868398;
+			offsetY=6.3896201e-005;
+			id=160;
+			side="EMPTY";
+			vehicle="Box_NATO_Support_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,6] call PMCT_fnc_cargoLoad;";
+		};
+		class Item69
+		{
+			position[]={15153.574,17.855854,17335.26};
+			azimut=225;
+			offsetY=6.2465697e-005;
+			id=161;
+			side="EMPTY";
+			vehicle="Box_NATO_Ammo_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,2] call PMCT_fnc_cargoLoad;";
+		};
+		class Item70
+		{
+			position[]={15152.748,17.851204,17337.094};
+			azimut=225;
+			offsetY=6.2465697e-005;
+			id=162;
+			side="EMPTY";
+			vehicle="Box_NATO_AmmoOrd_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,3] call PMCT_fnc_cargoLoad;";
+		};
+		class Item71
+		{
+			position[]={15151.94,17.846527,17338.986};
+			azimut=275;
+			id=163;
+			side="EMPTY";
+			vehicle="Box_NATO_Grenades_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,4] call PMCT_fnc_cargoLoad;";
+		};
+		class Item72
+		{
+			position[]={15154.689,17.860363,17334.109};
+			azimut=225;
+			offsetY=0.000118256;
+			id=164;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,1] call PMCT_fnc_cargoLoad;";
+		};
+		class Item73
+		{
+			position[]={15158.577,17.862873,17341.402};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=165;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,8] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,9] call PMCT_fnc_cargoLoad;";
 		};
 		class Item74
 		{
-			position[]={15153.839,17.845043,17341.947};
-			azimut=6.9868398;
-			offsetY=6.3896201e-005;
+			position[]={15089.597,17.618618,17193.129};
+			azimut=9.9920797;
+			offsetY=0.000227928;
 			id=166;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,6] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item75
 		{
-			position[]={15153.574,17.855854,17335.26};
-			azimut=225;
-			offsetY=6.2465697e-005;
+			position[]={15089.326,17.519741,17191.645};
+			azimut=9.9920797;
+			offsetY=0.000227928;
 			id=167;
 			side="EMPTY";
-			vehicle="Box_NATO_Ammo_F";
+			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,2] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item76
 		{
-			position[]={15152.748,17.851204,17337.094};
-			azimut=225;
-			offsetY=6.2465697e-005;
+			position[]={15091.621,17.705166,17192.805};
+			azimut=9.9920797;
+			offsetY=0.000227928;
 			id=168;
 			side="EMPTY";
-			vehicle="Box_NATO_AmmoOrd_F";
+			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,3] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item77
 		{
-			position[]={15151.94,17.846527,17338.986};
-			azimut=275;
+			position[]={15091.378,17.593472,17191.373};
+			azimut=9.9920797;
+			offsetY=0.000227928;
 			id=169;
 			side="EMPTY";
-			vehicle="Box_NATO_Grenades_F";
+			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,4] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item78
 		{
-			position[]={15154.689,17.860363,17334.109};
-			azimut=225;
-			offsetY=0.000118256;
+			position[]={15093.35,17.698086,17190.969};
+			azimut=9.9920797;
+			offsetY=0.000227928;
 			id=170;
 			side="EMPTY";
-			vehicle="Box_NATO_Wps_F";
+			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,1] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item79
 		{
-			position[]={15158.577,17.862873,17341.402};
+			position[]={15093.619,17.811245,17192.398};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=171;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,9] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item80
 		{
-			position[]={15089.597,17.618618,17193.129};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=172;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item81
-		{
-			position[]={15089.326,17.519741,17191.645};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=173;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item82
-		{
-			position[]={15091.621,17.705166,17192.805};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=174;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item83
-		{
-			position[]={15091.378,17.593472,17191.373};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=175;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item84
-		{
-			position[]={15093.35,17.698086,17190.969};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=176;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item85
-		{
-			position[]={15093.619,17.811245,17192.398};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=177;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item86
-		{
 			position[]={15153.99,17.91,17263.541};
 			azimut=314.28534;
-			id=178;
+			id=172;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			lock="LOCKED";
