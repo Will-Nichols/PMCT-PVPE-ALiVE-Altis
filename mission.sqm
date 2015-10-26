@@ -1252,7 +1252,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15338.664,-0.072107613,15054.898};
+					position[]={15338.664,-0.14768389,15054.898};
 					class args
 					{
 						items=21;
@@ -1817,7 +1817,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="[this, 1] call PMCT_fnc_vic_addCargo;";
+							value="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 							parentCls="ALiVE_SUP_TRANSPORT";
 							typeName="transport_code";
 						};
@@ -3351,7 +3351,7 @@ class Mission
 						items=13;
 						class Item0
 						{
-							value="1";
+							value="0";
 							parentCls="ACE_moduleAdvancedMedicalSettings";
 							typeName="enableFor";
 						};
@@ -4068,7 +4068,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="[this, 1] call PMCT_fnc_vic_addCargo;";
+							value="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 							parentCls="ALiVE_SUP_TRANSPORT";
 							typeName="transport_code";
 						};
@@ -4336,7 +4336,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			syncId=21;
 			synchronizations[]={0};
 		};
@@ -4384,7 +4384,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			skill=0.2;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			description="US Army - Medical Assistant";
 			syncId=23;
 			synchronizations[]={0};
@@ -4418,7 +4418,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			syncId=24;
 			synchronizations[]={0};
 		};
@@ -4430,7 +4430,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_MRAP_01_gmg_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			syncId=25;
 			synchronizations[]={0};
 		};
@@ -4442,7 +4442,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_MRAP_01_gmg_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			syncId=26;
 			synchronizations[]={0};
 		};
@@ -4454,7 +4454,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_MRAP_01_hmg_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			syncId=27;
 			synchronizations[]={0};
 		};
@@ -4466,7 +4466,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_MRAP_01_hmg_F";
 			skill=0.60000002;
-			init="[this, 1] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 1] call PMCT_fnc_vic_addCargo;";
 			syncId=28;
 			synchronizations[]={0};
 		};
@@ -4546,7 +4546,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Truck_01_medical_F";
 			skill=0.60000002;
-			init="[this, 2] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=29;
 			synchronizations[]={11};
 		};
@@ -4559,7 +4559,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Truck_01_medical_F";
 			skill=0.60000002;
-			init="[this, 2] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=30;
 			synchronizations[]={11};
 		};
@@ -4572,7 +4572,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Truck_01_medical_F";
 			skill=0.60000002;
-			init="[this, 2] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=31;
 			synchronizations[]={11};
 		};
@@ -4643,7 +4643,7 @@ class Mission
 			vehicle="RHS_UH60M_MEV2";
 			skill=0.60000002;
 			text="MED_AIR_1";
-			init="[this, 2] call PMCT_fnc_vic_addCargo;";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=36;
 			synchronizations[]={15};
 		};
