@@ -38,7 +38,7 @@ Picking up INTEL items will create a marker in the general area of a cache locat
 Find and destroy the cache.<br/><br/>
 
 <t size=2 align=left>Who with?</t><br/>
-Join our teamspeak 3 channel (ts3.whiskeycompany.net) to meet up with others on the map, or use the ingame VOIP.<br/><br/>
+Join our teamspeak 3 server (4sfg.ts3dns.com) to meet up with others on the map, or use the ingame VOIP.<br/><br/>
 
 CREDITS
 ========<br/><br/>
