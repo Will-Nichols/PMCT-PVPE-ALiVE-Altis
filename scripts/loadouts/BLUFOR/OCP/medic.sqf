@@ -1,6 +1,6 @@
 //medic.sqf
 _unit = player;
-
+parms ["_camo"];
 //remove existing items
 removeAllItems _unit;
 removeAllAssignedItems _unit;
@@ -12,12 +12,37 @@ removeGoggles _unit;
 removeAllWeapons _unit;
 sleep 0.1;
 
+/* camo variants
+	0: OCP
+	1: Green
+	2: Black
+	3: DCU
+*/
 //add uniform
+switch (_camo) do {
+	case 0: {
+				_unit forceAddUniform "TFA_mcam";
+				_unit addVest "TFA_PlateCarrierH_MCam";
+				_unit addHeadgear "TFA_H_HelmetIA_mcam";
+				_unit addBackpack "TFA_assault_Mcam";
+			};
+	case 1: {
+				_unit forceAddUniform "TFA_Black";
+				_unit addVest "TFA_PlateCarrierH_Black";
+				_unit addHeadgear "TFA_H_HelmetIA_Black";
+				_unit addBackpack "TFA_assault_Black";
+	
+	
+			};
+
+				};
+/*
 _unit forceAddUniform "TFA_mcam";
 _unit addVest "TFA_PlateCarrierH_MCam";
 _unit addHeadgear "TFA_H_HelmetIA_mcam";
 _unit addBackpack "TFA_assault_Mcam";
 _unit addGoggles "T_HoodTanCLR";
+*/
 
 //add common items
 _unit linkItem "ItemMap";

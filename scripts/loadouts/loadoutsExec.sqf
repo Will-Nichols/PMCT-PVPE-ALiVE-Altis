@@ -10,7 +10,8 @@ if (typeOf player == "unit_classname") then
 	};
 	
 */
-
+params ["", "", "_camo"];
+if (_camo == null) then {_camo = 0;};
 switch (playerSide) do {
 //---------------------------------------------------------------------------------------------------- BLUFOR
     case west: {
@@ -30,7 +31,7 @@ switch (playerSide) do {
 //-------------------------medic
     if (typeOf player == "B_medic_F") then
         {
-            [] call PMCT_fnc_Load_B_Medic;
+            [_camo] call PMCT_fnc_Load_B_Medic;
         };
 
 //-------------------------explo_spec

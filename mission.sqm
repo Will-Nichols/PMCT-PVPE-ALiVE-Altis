@@ -69,7 +69,9 @@ class Mission
 		"aia_misc_config",
 		"A3_Soft_F_Bootcamp_Offroad_01",
 		"a3_soft_f_offroad_01",
-		"CUP_AirVehicles_UH60"
+		"CUP_AirVehicles_UH60",
+		"CUP_WheeledVehicles_HMMWV",
+		"aia_misc3_config"
 	};
 	addOnsAuto[]=
 	{
@@ -131,6 +133,7 @@ class Mission
 		"A3_Soft_F_MRAP_01",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Air_F_Beta_Heli_Transport_02",
+		"CUP_WheeledVehicles_HMMWV",
 		"A3_Soft_F_Gamma_HEMTT",
 		"A3_Structures_F_Mil_Cargo",
 		"CUP_AirVehicles_UH60",
@@ -139,6 +142,7 @@ class Mission
 		"aia_misc_config",
 		"A3_Soft_F_Bootcamp_Offroad_01",
 		"a3_soft_f_offroad_01",
+		"aia_misc3_config",
 		"a3_map_altis"
 	};
 	randomSeed=7188797;
@@ -3149,7 +3153,7 @@ class Mission
 						};
 						class Item1
 						{
-							value="-1";
+							value="180";
 							parentCls="ACE_moduleReviveSettings";
 							typeName="maxReviveTime";
 						};
@@ -3211,7 +3215,7 @@ class Mission
 						items=2;
 						class Item0
 						{
-							value="MED_AIR_1, MED_GROUND_1, MED_GROUND_2, MED_GROUND_3";
+							value="MED_AIR_1, MED_AIR_2, MED_GROUND_1, MED_GROUND_2, MED_GROUND_3";
 							parentCls="ACE_moduleAssignMedicVehicle";
 							typeName="EnableList";
 						};
@@ -3789,7 +3793,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15253.028,17.982859,17292.822};
+					position[]={15265.102,18.010752,17299.711};
 					class args
 					{
 						items=10;
@@ -3861,7 +3865,7 @@ class Mission
 					lock="UNLOCKED";
 					skill=0.60000002;
 					syncId=15;
-					synchronizations[]={36};
+					synchronizations[]={36,46};
 				};
 			};
 		};
@@ -3913,7 +3917,7 @@ class Mission
 						items=2;
 						class Item0
 						{
-							value="repair";
+							value="veh_1";
 							parentCls="ACE_moduleAssignRepairFacility";
 							typeName="EnableList";
 						};
@@ -4083,7 +4087,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=81;
+		items=82;
 		class Item0
 		{
 			position[]={15236.952,17.998047,17296.098};
@@ -4536,11 +4540,11 @@ class Mission
 		};
 		class Item42
 		{
-			position[]={15222.194,17.91,17238.354};
+			position[]={15222.663,17.91,17237.416};
 			azimut=90;
 			id=134;
 			side="EMPTY";
-			vehicle="B_Truck_01_medical_F";
+			vehicle="CUP_B_HMMWV_Ambulance_USMC";
 			skill=0.60000002;
 			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=29;
@@ -4553,7 +4557,7 @@ class Mission
 			offsetY=-0.0038042101;
 			id=135;
 			side="EMPTY";
-			vehicle="B_Truck_01_medical_F";
+			vehicle="CUP_B_HMMWV_Ambulance_USA";
 			skill=0.60000002;
 			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=30;
@@ -4566,7 +4570,7 @@ class Mission
 			offsetY=-0.0179176;
 			id=136;
 			side="EMPTY";
-			vehicle="B_Truck_01_medical_F";
+			vehicle="CUP_B_HMMWV_Ambulance_USA";
 			skill=0.60000002;
 			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
 			syncId=31;
@@ -4636,7 +4640,7 @@ class Mission
 			offsetY=-0.0095672598;
 			id=142;
 			side="EMPTY";
-			vehicle="CUP_B_UH60M_FFV_US";
+			vehicle="CUP_B_UH60M_Unarmed_FFV_MEV_US";
 			skill=0.60000002;
 			text="MED_AIR_1";
 			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
@@ -4787,114 +4791,116 @@ class Mission
 		};
 		class Item64
 		{
-			position[]={15139.755,17.91,17168.33};
-			id=156;
-			side="EMPTY";
-			vehicle="HeliH";
-			skill=0.60000002;
-			text="repair";
-		};
-		class Item65
-		{
 			position[]={15155.229,17.849072,17341.828};
 			azimut=101.784;
 			offsetY=2.4795499e-005;
-			id=157;
+			id=156;
 			side="EMPTY";
 			vehicle="Box_NATO_WpsLaunch_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,7] call PMCT_fnc_cargoLoad;";
 		};
-		class Item66
+		class Item65
 		{
 			position[]={15152.438,17.844881,17340.607};
 			azimut=295;
 			offsetY=5.3405802e-005;
-			id=158;
+			id=157;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,5] call PMCT_fnc_cargoLoad;";
 		};
-		class Item67
+		class Item66
 		{
 			position[]={15156.574,17.855068,17341.818};
 			azimut=9.9920797;
 			offsetY=0.000227928;
-			id=159;
+			id=158;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,8] call PMCT_fnc_cargoLoad;";
 		};
-		class Item68
+		class Item67
 		{
 			position[]={15153.839,17.845043,17341.947};
 			azimut=6.9868398;
 			offsetY=6.3896201e-005;
-			id=160;
+			id=159;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,6] call PMCT_fnc_cargoLoad;";
 		};
-		class Item69
+		class Item68
 		{
 			position[]={15153.574,17.855854,17335.26};
 			azimut=225;
 			offsetY=6.2465697e-005;
-			id=161;
+			id=160;
 			side="EMPTY";
 			vehicle="Box_NATO_Ammo_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,2] call PMCT_fnc_cargoLoad;";
 		};
-		class Item70
+		class Item69
 		{
 			position[]={15152.748,17.851204,17337.094};
 			azimut=225;
 			offsetY=6.2465697e-005;
-			id=162;
+			id=161;
 			side="EMPTY";
 			vehicle="Box_NATO_AmmoOrd_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,3] call PMCT_fnc_cargoLoad;";
 		};
-		class Item71
+		class Item70
 		{
 			position[]={15151.94,17.846527,17338.986};
 			azimut=275;
-			id=163;
+			id=162;
 			side="EMPTY";
 			vehicle="Box_NATO_Grenades_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,4] call PMCT_fnc_cargoLoad;";
 		};
-		class Item72
+		class Item71
 		{
 			position[]={15154.689,17.860363,17334.109};
 			azimut=225;
 			offsetY=0.000118256;
-			id=164;
+			id=163;
 			side="EMPTY";
 			vehicle="Box_NATO_Wps_F";
 			skill=0.60000002;
 			init="this allowDamage false; [this,1] call PMCT_fnc_cargoLoad;";
 		};
-		class Item73
+		class Item72
 		{
 			position[]={15158.577,17.862873,17341.402};
+			azimut=9.9920797;
+			offsetY=0.000227928;
+			id=164;
+			side="EMPTY";
+			vehicle="Box_NATO_Support_F";
+			skill=0.60000002;
+			init="this allowDamage false; [this,9] call PMCT_fnc_cargoLoad;";
+		};
+		class Item73
+		{
+			position[]={15089.597,17.618618,17193.129};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=165;
 			side="EMPTY";
 			vehicle="Box_NATO_Support_F";
 			skill=0.60000002;
-			init="this allowDamage false; [this,9] call PMCT_fnc_cargoLoad;";
+			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
 		};
 		class Item74
 		{
-			position[]={15089.597,17.618618,17193.129};
+			position[]={15089.326,17.519741,17191.645};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=166;
@@ -4905,7 +4911,7 @@ class Mission
 		};
 		class Item75
 		{
-			position[]={15089.326,17.519741,17191.645};
+			position[]={15091.621,17.705166,17192.805};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=167;
@@ -4916,7 +4922,7 @@ class Mission
 		};
 		class Item76
 		{
-			position[]={15091.621,17.705166,17192.805};
+			position[]={15091.378,17.593472,17191.373};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=168;
@@ -4927,7 +4933,7 @@ class Mission
 		};
 		class Item77
 		{
-			position[]={15091.378,17.593472,17191.373};
+			position[]={15093.35,17.698086,17190.969};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=169;
@@ -4938,7 +4944,7 @@ class Mission
 		};
 		class Item78
 		{
-			position[]={15093.35,17.698086,17190.969};
+			position[]={15093.619,17.811245,17192.398};
 			azimut=9.9920797;
 			offsetY=0.000227928;
 			id=170;
@@ -4949,25 +4955,39 @@ class Mission
 		};
 		class Item79
 		{
-			position[]={15093.619,17.811245,17192.398};
-			azimut=9.9920797;
-			offsetY=0.000227928;
-			id=171;
-			side="EMPTY";
-			vehicle="Box_NATO_Support_F";
-			skill=0.60000002;
-			init="this allowDamage false; [this,10] call PMCT_fnc_cargoLoad;";
-		};
-		class Item80
-		{
 			position[]={15153.99,17.91,17263.541};
 			azimut=314.28534;
-			id=172;
+			id=171;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			lock="LOCKED";
 			skill=0.60000002;
 			text="air_1_1";
+		};
+		class Item80
+		{
+			position[]={15279.053,17.91,17270.543};
+			azimut=350.74799;
+			offsetY=-0.0095672598;
+			id=172;
+			side="EMPTY";
+			vehicle="CUP_B_UH60L_Unarmed_FFV_MEV_US";
+			skill=0.60000002;
+			text="MED_AIR_2";
+			init="[this] call PMCT_fnc_vic_clearCargo; [this, 2] call PMCT_fnc_vic_addCargo;";
+			syncId=46;
+			synchronizations[]={15};
+		};
+		class Item81
+		{
+			position[]={15173.567,17.875122,17336.34};
+			azimut=47.1866;
+			id=173;
+			side="EMPTY";
+			vehicle="Gunrack1";
+			leader=1;
+			skill=0.60000002;
+			init="this allowDamage false;  this addAction [""OCP"", call PMCT_fnc_LoadoutExec, 0]; this addAction [""Green"", call PMCT_fnc_LoadoutExec, 1];";
 		};
 	};
 	class Markers
@@ -5044,7 +5064,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			position[]={15214.585,17.950001,17293.77};
@@ -5097,6 +5117,21 @@ class Mission
 		class Item3
 		{
 			position[]={15256.398,17.91,17271.346};
+			a=8;
+			b=8;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="vehloadout = vehicle (thislist select 0); selectloadout1 = vehloadout addAction [(""<t color='#FF0000'>General Field Loadout</t>""),""scripts\vic_loadout.sqf"",1]; selectloadout2 = vehloadout addAction [(""<t color='#FF0000'>Medical Loadout</t>""),""scripts\vic_loadout.sqf"",2]; selectloadout3 = vehloadout addAction [(""<t color='#FF0000'>General Night Loadout</t>""),""scripts\vic_loadout.sqf"",3]; selectloadout4 = vehloadout addAction [(""<t color='#FF0000'>General Diving Loadout</t>""),""scripts\vic_loadout.sqf"",4];";
+			expDesactiv="vehloadout removeaction selectloadout1; vehloadout removeaction selectloadout2; vehloadout removeaction selectloadout3; vehloadout removeaction selectloadout4;";
+			class Effects
+			{
+			};
+		};
+		class Item4
+		{
+			position[]={15279.133,17.91,17273.133};
 			a=8;
 			b=8;
 			activationBy="WEST";
