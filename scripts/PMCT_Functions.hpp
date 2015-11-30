@@ -9,6 +9,7 @@ class PMCT
 		class loadouts
 		{
 			class loadoutsExec {file = "scripts\loadouts\loadoutsExec.sqf";};
+			class camoCrateActions {file ="scripts\loadouts\camoCrateActions.sqf";};
 			class Load_B_Pilot {file = "scripts\loadouts\BLUFOR\pilot.sqf";};
 			class Load_B_Autorifle {file = "scripts\loadouts\BLUFOR\OCP\autorifleman.sqf";};
 			class Load_B_Explosive {file = "scripts\loadouts\BLUFOR\OCP\explo_spec.sqf";};
