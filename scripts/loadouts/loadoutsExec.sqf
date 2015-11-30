@@ -10,7 +10,7 @@ if (typeOf player == "unit_classname") then
 	};
 	
 */
-params ["", "", "_camo"];
+params ["", "", "", "_camo"];
 if (_camo == null) then {_camo = 0;};
 switch (playerSide) do {
 //---------------------------------------------------------------------------------------------------- BLUFOR
