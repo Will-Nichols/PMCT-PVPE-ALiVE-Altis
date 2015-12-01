@@ -1,6 +1,6 @@
 //medic.sqf
 _unit = player;
-parms ["_camo"];
+params ["_camo"];
 //remove existing items
 removeAllItems _unit;
 removeAllAssignedItems _unit;
@@ -14,8 +14,8 @@ sleep 0.1;
 
 /* camo variants
 	0: OCP
-	1: Green
-	2: Black
+	1: Black
+	2: Green
 	3: DCU
 */
 //add uniform

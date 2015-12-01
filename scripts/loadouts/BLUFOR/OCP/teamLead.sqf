@@ -1,6 +1,6 @@
 //teamLead.sqf
 _unit = player;
-
+params ["_camo"];
 //remove existing items
 removeAllItems _unit;
 removeAllAssignedItems _unit;
@@ -11,14 +11,40 @@ removeHeadgear _unit;
 removeGoggles _unit;
 removeAllWeapons _unit;
 sleep 0.1;
-
+/*
 //add uniform
 _unit forceAddUniform "TFA_mcam";
 _unit addVest "TFA_PlateCarrierH_MCam";
 _unit addHeadgear "TFA_H_HelmetIA_mcam";
 _unit addBackpack "TFA_511_MCAM";
 _unit addGoggles "T_HoodTanCLR";
+*/
 
+
+/* camo variants
+	0: OCP
+	1: Black
+	2: Green
+	3: DCU
+*/
+//add uniform
+switch (_camo) do {
+	case 0: {
+				_unit forceAddUniform "TFA_mcam";
+				_unit addVest "TFA_PlateCarrierH_MCam";
+				_unit addHeadgear "TFA_H_HelmetIA_mcam";
+				_unit addBackpack "TFA_511_MCAM";
+			};
+	case 1: {
+				_unit forceAddUniform "TFA_Black";
+				_unit addVest "TFA_PlateCarrierH_Black";
+				_unit addHeadgear "TFA_Mich_Black";
+				_unit addBackpack "TFA_511_BLK";
+	
+	
+			};
+
+				};
 //add common items
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
