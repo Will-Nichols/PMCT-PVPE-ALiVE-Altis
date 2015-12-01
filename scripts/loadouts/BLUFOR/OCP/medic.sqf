@@ -17,32 +17,42 @@ sleep 0.1;
 	1: Black
 	2: Green
 	3: DCU
+	4: White
 */
 //add uniform
 switch (_camo) do {
-	case 0: {
+	case 0: { //OCP
 				_unit forceAddUniform "TFA_mcam";
 				_unit addVest "TFA_PlateCarrierH_MCam";
 				_unit addHeadgear "TFA_H_HelmetIA_mcam";
 				_unit addBackpack "TFA_assault_Mcam";
 			};
-	case 1: {
+	case 1: { //BLK
 				_unit forceAddUniform "TFA_Black";
 				_unit addVest "TFA_PlateCarrierH_Black";
-				_unit addHeadgear "TFA_H_HelmetIA_Black";
-				_unit addBackpack "TFA_assault_Black";
-	
-	
+				_unit addHeadgear "TFA_Mich_Black";
+				_unit addBackpack "TFA_assault_Blk";
 			};
+	case 2: { //GREEN
+				_unit forceAddUniform "TFA_green";
+				_unit addVest "TFA_PlateCarrierH_Grn";
+				_unit addHeadgear "TFA_H_HelmetIA_GRN";
+				_unit addBackpack "TFA_assault_FOL";
+			};
+	case 3: { //DCU
+				_unit forceAddUniform "TFA_tri";
+				_unit addVest "TFA_PlateCarrierH_Tan";
+				_unit addHeadgear "TFA_H_HelmetIA_TRI";
+				_unit addBackpack "TFA_assault_Tan";
+			};
+	case 4: { //White
+				_unit forceAddUniform "TFA_white";
+				_unit addVest "TFA_PlateCarrierH_WTE";
+				_unit addHeadgear "TFA_H_HelmetIA_wte";
+				_unit addBackpack "TFA_assault_wte";
+			};			
 
 				};
-/*
-_unit forceAddUniform "TFA_mcam";
-_unit addVest "TFA_PlateCarrierH_MCam";
-_unit addHeadgear "TFA_H_HelmetIA_mcam";
-_unit addBackpack "TFA_assault_Mcam";
-_unit addGoggles "T_HoodTanCLR";
-*/
 
 //add common items
 _unit linkItem "ItemMap";
